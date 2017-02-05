@@ -4,7 +4,10 @@
              x:Class="DivisasMVVM.App">
 	<Application.Resources>
 
-		<!-- Application resource dictionary -->
+		<ResourceDictionary>
+
+
+        </ResourceDictionary>
 
 	</Application.Resources>
 </Application>
