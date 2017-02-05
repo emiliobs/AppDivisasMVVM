@@ -2,8 +2,86 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DivisasMVVM.Pages.MainPage"
-             Title="Divisas.....">
+             Title="Divisas....."
+             BackgroundImage="fondo.jpg"
+             BindingContext="{Binding Main, Source={ StaticResource Locator}}">
 
-    <Label Text="Main Pages...." VerticalOptions="Center" HorizontalOptions="Center"></Label>
+    <StackLayout Padding="8">
+
+        <Label Text="Pesos"
+               TextColor="Coral"
+               FontAttributes="Bold"
+               FontSize="30">
+        </Label>
+
+        <Entry Placeholder="Entre valor en Pesos......"
+               Keyboard="Numeric"
+               Text="{Binding Pesos, Mode=TwoWay}">
+
+        </Entry>
+        <Button Text="Convertir"
+                BackgroundColor="Coral"
+                TextColor="White"
+                HeightRequest="40"
+                BorderRadius="20"
+                Command="{Binding ConverterCommand}">
+
+        </Button>
+
+        <Label Text="Dólares"
+               TextColor="Coral"
+               FontAttributes="Bold"
+               FontSize="30">
+
+        </Label>
+
+        <Entry Placeholder="Valor en dólares......"
+               FontAttributes="Bold"
+               TextColor="White"
+               BackgroundColor="White"
+               IsEnabled="False"
+               HorizontalTextAlignment="End"
+               Text="{Binding Dollar, Mode=TwoWay, StringFormat='${0:N2}'}">
+
+        </Entry>
+
+        <Label Text="Euros"
+               TextColor="Coral"
+               FontAttributes="Bold"
+               FontSize="30">
+
+        </Label>
+
+        <Entry Placeholder="Valor en euros......"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="End"
+               BackgroundColor="White"
+               TextColor="White"
+               IsEnabled="False"
+               Text="{Binding Euros, Mode=TwoWay, StringFormat='€{0:N2}'}">
+
+        </Entry>
+
+        <Label Text="Libras"
+               TextColor="Coral"
+               FontAttributes="Bold"
+               FontSize="30">
+
+        </Label>
+
+        <Entry Placeholder="Valor en libras......"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="End"
+               BackgroundColor="White"
+               TextColor="White"
+               IsEnabled="False"
+               Text="{Binding Pounds, Mode=TwoWay, StringFormat='£{0:N2}'}">
+
+        </Entry>
+
+
+
+    </StackLayout>
+
 
 </ContentPage>

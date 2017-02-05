@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "MvvmLightLibs": "5.4.0-alpha",
     "Xamarin.Forms": "2.3.4.192-pre2"
   },
   "frameworks": {
